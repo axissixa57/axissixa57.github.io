@@ -1,0 +1,159 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 0 0 2em;
+    padding: 10px 15px 20px;
+    box-shadow: 0px 0px 5px 0px #000;
+}
+
+header div:nth-child(2) {
+    flex-grow: 1;
+    /* padding-top: 30px; */
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    flex: 1 1 auto;
+    padding: 70px 30px 30px;
+}
+
+.left-side {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.right-side {
+    flex: 4;
+}
+
+.left-side>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 210px;
+    width: 210px;
+    margin-bottom: 15%;
+    box-shadow: 0px 3px 5px 0px #000;
+}
+
+.up,
+.down {
+    position: relative;
+    padding: 10px;
+}
+
+.up>div {
+    cursor: pointer;
+    text-align: center;
+    font-size: 2.5vh;
+    border: 1px solid black;
+}
+
+.up>div:hover {
+    background: #f74141;
+}
+
+.down>div {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.gray {
+    background: #c4c4c4;
+}
+
+.green {
+    background: #41f795;
+}
+
+.red {
+    background: #f74141;
+}
+
+.blue {
+    background: #41b6f7;
+}
+
+.up>div>i,
+.circle {
+    margin-right: 30px;
+}
+
+.right-side {
+    position: relative;
+    border: 1px solid black;
+}
+
+.right-side>.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #22223B;
+    cursor: grab;
+}
+
+.right-side>.square {
+    position: absolute;
+    border: 1px solid #22223B;
+    cursor: grab;
+}
+
+.right-side>.rectangle {
+    position: absolute;
+    border-style: solid;
+    border-width: 0 100px 150px 100px;
+    cursor: grab;
+}
+
+.right-side>.parallelogram {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    background: red;
+}
+
+.light {
+    animation: winking 1s ease-in-out 1s infinite alternate;
+}
+
+@keyframes winking {
+    0% {
+        box-shadow: 0 0 45px 20px #ff0000;
+    }
+
+    50% {
+        box-shadow: 0 0 20px 0 #000000;
+    }
+
+    100% {
+        box-shadow: 0 0 45px 20px #ff0000;
+    }
+}

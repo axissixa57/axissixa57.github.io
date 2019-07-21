@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i&subset=cyrillic');
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    background-image: linear-gradient(30deg, #ffffff,#f5f0ff );
+}
+body > header {
+    height: 60px;
+    background-color: #7161EF;
+}
+#page {
+    flex: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#page > div {
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid black;
+    height: 480px;
+    width: 640px;
+    box-shadow: 10px -10px 0 0 #7161EF;
+    padding: 35px;
+}
+section#frame_1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+#frame_1 > p {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+#frame_1 > p > span {
+    font-weight: 600;
+    color: #a09016;
+}
+#frame_1 > small {
+    font-size: 1rem;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+#frame_1 > button {
+    width: 200px;
+    height: 50px;
+    margin-left: 300px;
+    cursor: pointer;
+    background: #7161EF;
+    color: white;
+    border: unset;
+    font-size: 1.3rem;
+}
+#frame_1 > button:focus {
+    outline: none;
+}
+#frame_1 > button:hover {
+    background: #a397ff;
+}
+
+section#frame_2 {
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-flow: column nowrap;
+}
+#frame_2 > small {
+    align-self: flex-start;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+input {
+    border: none;
+    border-bottom: 1.5px solid #a397ff;
+    margin-bottom: 10px;
+    width: 235px;
+    outline: none;
+}
+
+.left {
+    float: left;
+    padding-left: 30px;
+}
+
+.right {
+    float: right;
+    padding-right: 30px;
+}
+
+.right > p:nth-child(3) {
+    padding-top: 55px;
+}
+
+.left > p, .right > p {
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.buttons button {
+    width: 125px;
+    height: 35px;
+    cursor: pointer;
+    background: #7161EF;
+    color: white;
+    border: unset;
+    font-size: 1rem;
+    margin: 0 5px;
+}
+
+.buttons button:focus {
+    outline: none;
+}
+
+.buttons button:hover {
+    background: #a397ff;
+}
+
+button:disabled {
+    background: #c4bdf0;
+}
+
+button:disabled:hover {
+    background: #c4bdf0;
+}
+
+#countries {
+    margin-bottom: 10px;
+    width: 235px;
+}
+
+section#frame_3 {
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-flow: column nowrap;
+}
+
+section#frame_3 > p {
+    margin: 0;
+    padding: 30px 14px;
+}
+
+.phone-data {
+    display: flex;
+    align-items: center;
+}
+
+.flag {
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.flag-pic {
+    background: url('./img/flags.png') no-repeat 0 0;
+    background-position: -1px -1412px;
+    background-size: 24px 3876px;
+    width: 24px;
+    height: 16px;
+    margin-right: 15px;
+}
+
+.listOfCountries {
+    display: none;
+    flex-flow: column nowrap;
+    overflow-y: auto;
+    z-index: 2000;
+    position: absolute;
+    top: -280px;
+    left: -15%;
+    width: 400px;
+    height: 905px;
+    min-width: 400px;
+    max-height: 905px;
+    background: #fff;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+.countryId {
+    display: flex;
+    padding: 10px 20px 5px;
+}
+.countryId:hover {
+    background: #e6e6e6;
+}
+.countryFlag {
+    background: url('./img/flags.png') no-repeat 0 0;
+    background-position: -1px -2278px;
+    background-size: 24px 3876px;
+    width: 24px;
+    height: 16px;
+    margin-right: 15px;
+}    
+.countryNumberId {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 16px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.countryNumberId span {
+    padding-left: 8px;
+    color: rgba(0,0,0,0.54);
+    margin-bottom: -1.2px;
+}
+
+.flag-arrow {
+    border-color: rgba(68,68,68,0.4) transparent;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    height: 0;
+    width: 0;
+    right: 5px;
+    color: black;
+}
+
+#phoneNumberId {
+    margin: 0px;
+    border: 1.5px solid #a397ff;
+    border-radius: 5px;
+    height: 30px;
+    margin-right: 20px;
+    font-size: 1rem;
+    padding-left: 20px;
+}
+
+.phone-data > button, .confirmation-code button {
+    width: 100px;
+    height: 39px;
+    cursor: pointer;
+    background: #7161EF;
+    color: white;
+    border: unset;
+    font-size: 1rem;
+    margin: 0 5px;
+    border-radius: 7px;
+}
+.phone-data > button:hover, .confirmation-code button:hover {
+    background: #a397ff;
+}
+
+.phone-data > input::-webkit-input-placeholder { 
+    color: grey;
+}
+
+.confirmation-code {
+    padding: 50px 0px 0px;
+    visibility: hidden;
+}
+.confirmation-code div {
+    display: flex;
+    align-items: flex-end;
+}
+.confirmation-code p {
+    margin: 0;
+}
+.confirmation-code input {
+    border: 1px solid #a397ff;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 20px 0px 33px;
+
+}
+.confirmation-code input {
+    border: 1px solid #a397ff;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 20px 0px 33px;
+
+}
+#frame_3 .buttons {
+    padding-top: 70px;
+}
+
+section#frame_4 {
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-flow: column nowrap;
+}
+
+section#frame_4 > p {
+    margin: 0;
+    padding: 30px 14px;
+}
+
+.numberOfCard {
+    padding-left: 60px;
+}
+.numberOfCard > p {
+    margin: 0px 0px 5px 0px;
+}
+.numberOfCard input {
+    text-align: center;
+    font-size: 1.1rem;
+    width: 60px;
+    border: 1.5px solid #a397ff;
+    border-radius: 5px;
+}
+.validity {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    padding-left: 60px;
+}
+.validity input {
+    width: 110px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.validity p {
+    padding: 0;
+}
+
+#checkbox {
+    margin: 5px 0px 0px 0px;
+    width: 35px;
+}
+
+.condition {
+    display: flex;
+    padding-top: 35px;
+}
+
+.condition p {
+    margin: 0;
+    display: flex;
+}
+
+#frame_4 .buttons {
+    padding-top: 20px;
+}
+
+section#frame_5 {
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-flow: column nowrap;
+    background: url('img/flying_star.svg') no-repeat 0 0;
+    background-position: 50% 0%;
+    background-size: 568px 280px;
+}
+
+section#frame_5 > h2, section#frame_5 > p {
+    margin: 0px 0px 10px;
+    text-align: center;
+}
+
+.success {
+    color: #7967ff;
+    font-size: 2.7rem;
+    font-weight: bold;
+    text-shadow: 3px -3px 0px rgb(245, 208, 87);
+    padding-top: 170px;
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+}

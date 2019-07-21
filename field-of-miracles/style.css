@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One&subset=cyrillic');
+body, html, p {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+body > header {
+    height: 60px;
+    background-color: #7161EF;
+}
+.content {
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.main-area {
+    flex: 1;
+    background-color: #FFE7DB;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    overflow: auto;
+    font-family: 'Yeseva One';
+    text-align: center;
+    font-size: 5rem;
+}
+.main-area > div {
+    background-image: linear-gradient(rgba(32,32,32,.8), rgba(96,96,96,.7));
+    width: 16vh;
+    height: 16vh;
+    line-height: 16vh;
+    margin: 10px;
+    border: 2px solid #B2B2B2;
+    user-select: none;
+    color: transparent;
+    cursor: pointer;
+}
+.main-area > div.revealed {
+    background-image: linear-gradient(#eee, #fff);
+    transition: color 1.2s ease-out;
+    color: rgba(0,0,0,.75);
+    cursor: default;
+}
+
+/* post-main-area */
+
+.post-main-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background-color: #FFE7DB;
+    align-items: center;
+    padding: 20px 0;
+    overflow: auto;
+    font-family: 'Yeseva One';
+    text-align: center;
+    font-size: 2rem;
+}
+
+.post-main-area > div {
+    margin: 0 20px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center * {
+    margin: 30px 0px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right * {
+    margin: 10px 0px;
+}
+
+.answer {
+    height: 5vh;
+    width: 30vh;
+    font-size: 5vh;
+    font-family: 'Yeseva One';
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#btn {
+    height: 5vh;
+    width: 23vh;
+    font-family: 'Yeseva One';
+    font-size: 3vh;
+}
+
+#points {
+    color: red;
+}
+
+#numOfWords {
+    color: blue;
+}
+
+table {
+    border: 1px solid #000;
+    border-spacing: 25px;
+    box-shadow: 0 0 70px rgba(0,0,0,0.5);
+}
+
+td {
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+}
+
+.red {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.green {
+    background-color: #008000;
+    color: #fff;
+}
+
+.description {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background-color: #FFE7DB;
+    align-items: center;
+    padding: 20px 0;
+    font-family: 'Yeseva One';
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
+}
