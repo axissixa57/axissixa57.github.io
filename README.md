@@ -6,3 +6,4 @@
 ## **[Using-API](https://axissixa57.github.io/using-API/)**
 ## **[Palette](https://axissixa57.github.io/palette/)**
 ## **[Hexal](https://axissixa57.github.io/hexal/)**
+## **[React-Redux TODO](https://axissixa57.github.io/todo-app-redux/)**
